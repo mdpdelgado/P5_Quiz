@@ -28,6 +28,7 @@ sequelize.sync()
     .then(count => {
         if(!count){
             return sequelize.models.quiz.bulkCreate([
+                { question: "Pregunta Número 1", answer: "hola"},
                 { question: "Capital de Italia", answer: "Roma"},
                 { question: "Capital de Francia", answer: "París"},
                 { question: "Capital de España", answer: "Madrid"},
