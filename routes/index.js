@@ -12,6 +12,8 @@ router.get('/', (req, res, next) => {
 router.get('/author', (req, res, next) => {
     res.render('author');
 });
+//Autoload for routes using :quizId
+router.param('quizId', quizController.load);
 
 //Routes for the resource quizzes
 router.get('/quizzes',                     quizController.index);
