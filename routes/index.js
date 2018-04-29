@@ -9,8 +9,8 @@ router.get('/', (req, res, next) => {
 });
 
 // Author page.
-router.get('/author', (req, res, next) => {
-    res.render('author');
+router.get('/credits', (req, res, next) => {
+    res.render('credits');
 });
 //Autoload for routes using :quizId
 router.param('quizId', quizController.load);
